@@ -6,6 +6,10 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 #start-screen {
     position: relative;
     width: 100%;
@@ -27,30 +31,22 @@ body, html {
     z-index: 10; /* Ensure button stays above falling images */
 }
 
-.falling-image {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-    animation: fall 5s linear infinite, fade 5s ease-in forwards;
+#game-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes fall {
-    0% {
-        top: -150px;
-        transform: rotate(0deg);
-    }
-    100% {
-        top: 100%;
-        transform: rotate(360deg);
-    }
+#play-button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
