@@ -29,6 +29,13 @@ function startFallingImages() {
 setInterval(startFallingImages, 3000);
 
 document.getElementById('start-button').addEventListener('click', function() {
-    alert('Start button clicked!'); // Placeholder function
-    // You can add the functionality for starting the game here.
+    // Hide the start screen and show the game menu
+    document.getElementById('start-screen').classList.add('hidden');
+    document.getElementById('game-menu').classList.remove('hidden');
 });
+
+document.getElementById('play-button').addEventListener('click', function() {
+    alert('Play Game clicked!'); // Placeholder for game start function
+    // You can add the functionality to start the game here.
+});
+
