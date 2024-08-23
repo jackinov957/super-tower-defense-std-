@@ -34,6 +34,7 @@ document.getElementById('start-button').addEventListener('click', function() {
     document.getElementById('game-menu').classList.remove('hidden');
 });
 
+
 document.getElementById('play-button').addEventListener('click', function() {
     alert('Play Game clicked!'); // Placeholder for game start function
     // You can add the functionality to start the game here.
