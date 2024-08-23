@@ -44,3 +44,31 @@ body, html {
     max-width: 100%;
     max-height: 100%;
 }
+
+.falling-image {
+    position: absolute;
+    width: 50px; /* Set a specific size for the falling images */
+    height: 50px;
+    opacity: 1;
+    animation: fall 5s linear infinite, fade 5s ease-in forwards;
+}
+
+@keyframes fall {
+    0% {
+        top: -50px; /* Adjust to start from above the visible area */
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 100%; /* Fall to the bottom of the screen */
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
