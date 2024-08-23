@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#start-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-button {
+    width: 200px;
+    height: 80px;
+    background: url('startbutton.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure button stays above falling images */
+}
+
+.falling-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    animation: fall 5s linear infinite, fade 5s ease-in forwards;
+}
+
+@keyframes fall {
+    0% {
+        top: -150px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 100%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
